@@ -36,12 +36,8 @@ class HomeViewModel: NSObject {
                     self.delegate?.addData(pageData: self.gamesSlide, listData: self.gamesList, allData: gameList)
                     self.delegate?.dataUpdated()
                 }
-            }
-            
+            }            
         }
-        
-        
-        
     }
 }
 
