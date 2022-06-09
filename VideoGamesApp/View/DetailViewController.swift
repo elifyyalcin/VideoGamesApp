@@ -92,7 +92,7 @@ class DetailViewController: UIViewController {
         
         nameLabel.font = .systemFont(ofSize: 20, weight: .medium)
         
-        backButton.setBackgroundImage(UIImage(named: "fav"), for: .normal)
+        backButton.setBackgroundImage(UIImage(named: "back"), for: .normal)
         backButton.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
         
         favButton.addTarget(self, action: #selector(favButtonAction), for: .touchUpInside)
