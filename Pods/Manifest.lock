@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.4.1)
+  - SnapKit (5.6.0)
+  - SQLite.swift (0.13.3):
+    - SQLite.swift/standard (= 0.13.3)
+  - SQLite.swift/standard (0.13.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - SnapKit (~> 5.6.0)
+  - SQLite.swift (~> 0.13.3)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SnapKit
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
+
+PODFILE CHECKSUM: 98b737d92c02e51c4513b01ffd8f6b635d6f187e
+
+COCOAPODS: 1.10.1
