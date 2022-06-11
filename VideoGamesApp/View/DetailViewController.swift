@@ -98,12 +98,15 @@ class DetailViewController: UIViewController {
         favButton.addTarget(self, action: #selector(favButtonAction), for: .touchUpInside)
         
         if !dbGameArray.isEmpty {
+            var idArray = [Int]()
             for index in 0...dbGameArray.count - 1 {
-                if(Int(dbGameArray[index].id) == Int(gameId)) {
-                    favButton.setBackgroundImage(UIImage(named: "liked"), for: .normal)
-                } else {
-                    favButton.setBackgroundImage(UIImage(named: "like"), for: .normal)
-                }
+                idArray.append(dbGameArray[index].id)
+            }
+
+            if idArray.contains(gameId) {
+                favButton.setBackgroundImage(UIImage(named: "liked"), for: .normal)
+            } else {
+                favButton.setBackgroundImage(UIImage(named: "like"), for: .normal)
             }
         } else {
             favButton.setBackgroundImage(UIImage(named: "like"), for: .normal)
