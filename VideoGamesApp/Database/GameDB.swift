@@ -59,17 +59,17 @@ class DB {
     
     func gameList() -> [Game] {
         var arr:[Game] = []
-        let users = try! db.prepare(gameTable)
-        for item in users {
-            let us = Game(id: item[id], imgUrl: item[imgUrl], name: item[name], rating: item[rating],release: item[release] )
-            arr.append(us)
+        let games = try! db.prepare(gameTable)
+        for item in games {
+            let game = Game(id: item[id], imgUrl: item[imgUrl], name: item[name], rating: item[rating],release: item[release] )
+            arr.append(game)
         }
         return arr
     }
     
     func deleteGame( gameId: Int ) -> Int {
-        let alice = gameTable.filter(Expression<Bool>(id==gameId))
-        return try! db.run( alice.delete() )
+        let game = gameTable.filter(Expression<Bool>(id==gameId))
+        return try! db.run( game.delete() )
     }
     
 }
